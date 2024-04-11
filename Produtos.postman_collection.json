@@ -152,7 +152,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Opções",
 			"request": {
 				"method": "OPTIONS",
 				"header": [],

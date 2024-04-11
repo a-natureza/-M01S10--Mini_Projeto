@@ -62,7 +62,7 @@ app.post('/produtos', async (req,res) => {
         const produto = { id: salvarProdutos.currentId, ...produtoValidado };
         salvarProdutos.produtos.push(produto);
         salvarProdutos.currentId++;
-        fs.writeFile('produtos.json',JSON.stringify(salvarProdutos),   err=>{                             
+        fs.writeFileSync('produtos.json',JSON.stringify(salvarProdutos),   err=>{                             
             if(err){ 
                 console.log(err)
             } else {
@@ -134,7 +134,6 @@ app.delete("/produtos/:id", (req, res) => {
     if (index === -1) {
         return res.status(404).json("Produto não encontrado");
     }
-    produtos = salvarProdutos.produtos.filter(prod => prod.id !== parseInt(id));
     salvarProdutos.produtos.splice (index, 1);
     fs.writeFileSync('produtos.json', JSON.stringify(salvarProdutos));
     res.status(200).json({ message: "Produto excluído com sucesso."});
@@ -142,18 +141,18 @@ app.delete("/produtos/:id", (req, res) => {
 
 // Adicionando método Options para o endpoint de produtos
 // Implementacao basica 
-/* app.options('/produtos', (req,res)=>{
+app.options('/produtos', (req,res)=>{
     // Indica os métodos suportados para o endpoint /produtos/:id
     res.header('Allow', 'GET,POST,PUT,DELETE');
     res.status(204).json();
-}); */  
+}); 
 // Implementacao com Suporte a CORS - API acessada por clientes de diferentes origens
-app.options( '/produtos', (req, res) =>{
+/* app.options( '/produtos', (req, res) =>{
     res.header('Access-Control-Allow-Methods', 'GET, PUT, DELETE, PATCH, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header('Access-Control-Allow-Origin', '*');
     res.status(204).send();
-});
+});  */
 
 // Iniciar o servidor
 app.listen(3001, () => {
