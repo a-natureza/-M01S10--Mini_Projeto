@@ -91,7 +91,7 @@ app.post('/produtos', async (req,res) => {
 }); */
 
 // Update com validação
-app.put('/produtos', async (req, res) =>{
+app.put('/produtos/:id', async (req, res) =>{
     const id = req.body.id;
     try {
         // Valida o corpo da requisição

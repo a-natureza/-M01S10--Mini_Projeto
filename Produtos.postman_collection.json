@@ -44,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\": \"Escalda pés & Massagem\",\r\n    \"preco\": 270.00,\r\n    \"descricao\": \"1:30h de tratamento\"\r\n}",
+					"raw": "{\r\n    \"nome\": \"Acupuntura\",\r\n    \"preco\": 225.00,\r\n    \"descricao\": \"Medicina Tradicional Chinesa\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -72,7 +72,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 4,\r\n    \"nome\": \"Bamboo Massage\",\r\n    \"preco\": 225,\r\n    \"descricao\": \"Drenagem linfática, modeladora e relaxante\"\r\n}",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Massagem Esportiva\",\r\n    \"preco\": 270,\r\n    \"descricao\": \"Shiatsu, deepTissue, relaxante - 1:30h\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -80,14 +80,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3001/produtos",
+					"raw": "http://localhost:3001/produtos/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3001",
 					"path": [
-						"produtos"
+						"produtos",
+						"2"
 					]
 				}
 			},
@@ -108,7 +109,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3001/produtos/5",
+					"raw": "http://localhost:3001/produtos/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -116,7 +117,7 @@
 					"port": "3001",
 					"path": [
 						"produtos",
-						"5"
+						"3"
 					]
 				}
 			},
