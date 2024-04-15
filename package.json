@@ -1,0 +1,8 @@
+{
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "yup": "^1.4.0"
+  }
+  
+}
