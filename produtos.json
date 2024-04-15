@@ -1,5 +1,5 @@
 {
-    "currentId": 9,
+    "currentId": 11,
     "produtos": [
         {
             "id": 1,
@@ -20,12 +20,6 @@
             "descricao": "Drenagem linfática e relaxante"
         },
         {
-            "id": 6,
-            "nome": "Escalda pés & Massagem",
-            "preco": 270,
-            "descricao": "1:30h de tratamento"
-        },
-        {
             "id": 7,
             "nome": "Shiatsu Facial",
             "preco": 225,
@@ -34,6 +28,18 @@
         {
             "id": 8,
             "nome": "Acupuntura",
+            "preco": 225,
+            "descricao": "Medicina Tradicional Chinesa"
+        },
+        {
+            "id": 9,
+            "nome": "Acupuntura Estética",
+            "preco": 1.233,
+            "descricao": "MTC"
+        },
+        {
+            "id": 10,
+            "nome": "Acupuntura Estética",
             "preco": 225,
             "descricao": "Medicina Tradicional Chinesa"
         }

@@ -6,9 +6,9 @@
 const fs = require('fs');
 const express = require('express');
 const app = express();
-const yup = require('yup');
-app.use(express.json()); // Para poder processar JSON no corpo das requisições - for parsing application/json
-// Middleware para registrar o horário de cada solicitação recebida
+const yup = require('yup'); // Yup é uma biblioteca JavaScript para validação de esquemas.
+app.use(express.json()); // Para poder processar JSON no corpo das requisições
+
 
 // Esquema de validação para um produto
 const produtoSchema = yup.object().shape({
@@ -17,7 +17,8 @@ const produtoSchema = yup.object().shape({
     descricao: yup.string() // campo opcional
 });
 
-const logHoraMiddleware =  (req, res, next) => {
+// Middleware para registrar o horário de cada solicitação recebida
+const logHoraMiddleware = (req, res, next) => {
     const horaAtual = new Date().toISOString();
     console.log(
         `[${horaAtual}] Nova solicitação recebida para ${req.method} ${req.originalUrl}`);
